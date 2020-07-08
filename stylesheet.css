@@ -9,6 +9,7 @@
 body {
     background-color: #fff;
     font-size: 2.5vh;
+    overscroll-behavior-y: none;
 }
 h1 {
     text-align: center;
@@ -51,7 +52,7 @@ a {
 /* Home */
 .home-container {
     position: relative;
-    height: 96vh;
+    height: 92vh;
     z-index: 1;
 }
     .fixed-container {
@@ -78,6 +79,7 @@ a {
 .content-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    min-height: 92vh;
 }
     .grid-item {
         display: block;
@@ -98,6 +100,12 @@ a {
                 color: #fff;
                 display: block;
             }
+
+/* Article */
+.article {
+    min-height: 92vh;
+    padding: 8vh;
+}
 
 /* Footer */
 .waves{
