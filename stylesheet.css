@@ -1,0 +1,128 @@
+/* Global */
+@font-face { font-family: Meatloaf; src: url('Static/Fonts/Meatloaf Shadow Outline.ttf'); }
+@font-face { font-family: ShadowsIntoLight; src: url('Static/Fonts/ShadowsIntoLight-Regular.ttf'); }
+* {
+    font-family: 'ShadowsIntoLight', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+body {
+    background-color: #fff;
+    font-size: 2.5vh;
+}
+h1 {
+    text-align: center;
+}
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+
+/* Navigation */
+.nav-container {
+    display: grid;
+    grid-template-columns: 25vw 25vw 25vw 25vw;
+    grid-template-rows: 8vh 4vh;
+    position: fixed;
+    z-index: 3;
+}
+    .nav-item {
+        background-color: #222;
+        color: #fff;
+        font-size: 4vh;
+        text-align: center;
+        padding: 1vh;
+    }
+    .nav-item-active {
+        background-color: #111;
+    }
+    .nav-item:hover {
+        background-color: #111;
+    }
+.nav-shadow {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0) 4vh);
+    grid-column: span 4;
+}
+.nav-spacer {
+    height: 8vh;
+}
+
+/* Home */
+.home-container {
+    position: relative;
+    height: 96vh;
+    z-index: 1;
+}
+    .fixed-container {
+        width: 100vw;
+        position: fixed;
+    }
+        .logo {
+            display: block;
+            margin-top: 2vh;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50vh;
+        }
+        .summary {
+            position: relative;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            max-width: 70vh;
+        }
+
+/* Content */
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+}
+    .grid-item {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+        .content-container {
+            display: grid;
+            grid-template-rows: 60% 40%;
+        }
+            .content-image {
+                display: block;
+                width: 100%;
+            }
+            .content-text {
+                padding: 4vh;
+                background-color: #111;
+                color: #fff;
+                display: block;
+            }
+
+/* Footer */
+.waves{
+    position: relative;
+}
+    .wave {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: url(Static/Images/Wave.svg);
+    }
+
+.footer{
+    padding: 8vh 0;
+    color: #ffffff;
+    position: relative;
+    background-color: rgba(50, 50, 50, 0.9);
+    width: 100%;
+    z-index: 2;
+}
+    .social-grid {
+        display: grid;
+        grid-template-columns: 1fr auto auto auto auto 1fr;
+    }
+        .social-logo {
+            width: 6vh;
+            padding: 2vh 1vh 0 1vh;
+        }
